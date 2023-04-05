@@ -1,0 +1,46 @@
+<template>
+    <div>
+        <label>Enter Company Name</label>
+        <input type="text" v-model="name"/>
+
+        <label>Select Header Image</label>
+        <input type="file" multiple @change="handleFileSelection( $event )"/>
+    </div>
+</template>
+
+<script>
+export default {
+    data(){
+        return {
+            name: ''
+            files: []
+        }
+    },
+
+    methods: {
+        handleFileSelection( event ){
+            let uploadedFiles = event.target.files;
+
+            for( let i = 0; i < uploadedFiles.length; i++ ){
+                this.files.push( uploadedFiles[i] );
+            }
+        },
+
+        async submit(){
+            let formData = new FormData();
+
+            formData.append('name', this.name);
+
+            for( let i = 0; i < this.files.length; i++ ){
+                formData.append( 'images['+i+']', this.files[i] );
+            }
+
+            await this.$axios.post('/api/v1/companies', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+        }
+    }
+}
+</script>

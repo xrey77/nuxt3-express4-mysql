@@ -1,0 +1,70 @@
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px; 
+    height: 30px!important;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border-radius: 100%; 
+}
+.x1 {
+    color: goldenrod;
+    background-color: yellow;
+}
+.logo {
+    width: 100px;
+    height: 50px;
+}
+.profile-card {
+    margin: auto;
+    width: 90%;
+}
+.user {
+    width: 120px;
+    height: 120px;
+    padding-bottom: 10px;
+}
+
+.save {
+    margin-top: 10px;
+}
+.qr-fontsize {
+    font-size: 12px;
+}
+.fontsize-12 {
+    font-size: 12px;
+}
+
+.ml {
+    margin-left: 10px;
+}
+.qrcode1 {
+    width: 200px;
+    height: 200px;
+    float: right;
+    opacity: 0.4;
+}
+.qrcode2 {
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+.footer {
+    font-size: 12px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.xcanvas {
+    width: 80%!important;
+}
